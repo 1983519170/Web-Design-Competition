@@ -7,22 +7,48 @@ body{
     padding-right: 10%;
     background-color: white;
     border-radius: 10px;
-}
-#navbar-title li{
-    &:hover{
-        background-color: darkgray;
+    #web-name{
+        button{
+            font-size: 125%;
+            border: 0;
+            background-color: transparent;
+            color: #D14E5B;
+            padding-top:10%;
+        }
+        h3{
+            margin-top: 0;
+        }
     }
-}
-#navbar-search{
-    padding-right: 5%;
-}
-#navbar-search-button{
-    border: 0;
-}
-#navbar-search-text{
-    width: 125%;
-    &:focus{
-        border-color: darkturquoise;
+    #navbar-title-left{
+        button{
+            padding-top:27% ;
+            font-size: 125%;
+            border: 0;
+            background-color: transparent;
+            &:hover{
+                color: #D14E5B;
+            }  
+        }
+    } 
+    #navbar-title-right{
+        #navbar-title-left();
+        button
+        {
+            padding-top: 17px;//待修改，使用%高度不一
+            font-size: 100%;
+        }
+    }
+    #navbar-search{
+        padding-right: 5%;
+    }
+    #navbar-search-button{
+        border: 0;
+    }
+    #navbar-search-text{
+        width: 125%;
+        &:focus{
+            border-color: darkturquoise;
+        }
     }
 }
 .container{
@@ -30,10 +56,37 @@ body{
 }
 #left{
     background-color: white;
-    height: 1000px;
+    height: auto;
+    padding: 0%;
+    #context{
+        .list-group-item{
+            border: 1px solid hsla(0,0%,59.2%,.1);
+            padding-left: 3%;
+            padding-right: 3%;
+            &:hover{
+                background-color:hsla(0,0%,84.7%,.1);
+            }
+            a{
+                color: black;
+            }
+            p{
+                color: #b2bac2;
+                width: 100%;
+            }
+            span{
+                color: #b2bac2;
+                font-size: 90%;
+            }
+            button{
+                display: inline-block;
+                cursor: pointer;
+                outline: none;
+                border: 2px solid hsla(0,0%,59.2%,.1);
+            }
+        }
+    }
 }
 #right{
-
     #list-authors{  
         border: 1px solid hsla(0,0%,59.2%,.1);
         a{
@@ -44,8 +97,14 @@ body{
             color:  rgb(107, 107, 107);
             font-size: 20px;
             border-bottom: 1px solid hsla(0,0%,59.2%,.1);
+            text-align: center ;
         }
         #authors{
+            button{
+                border: 0;
+                background-color: transparent;
+                width: 100%;
+            }
             &:hover{
                 background-color:hsla(0,0%,84.7%,.1);
             }
@@ -54,6 +113,29 @@ body{
         #complete-list
         {
             border-top: 1px solid hsla(0,0%,59.2%,.1);
+            button{
+                border: 0;
+                background-color: transparent;
+                width: 100%;
+                color: #007fff;
+            }
         }
     }   
+}
+#register{
+    padding-top: 6%;
+    .modal-content{
+        width: 65%;
+        margin-left: 20%;
+    }
+    .text-right{
+        padding-bottom: 5%;
+        padding-top: 3%;
+    }
+}
+#login{
+    #register();
+}
+#change-password{
+    #register();
 }
